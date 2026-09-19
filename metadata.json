@@ -1,0 +1,6 @@
+{
+  "name": "DSA Quiz & Learning Platform",
+  "description": "Full-stack Data Structures and Algorithms learning and quiz platform with problem directory, interactive timed quizzes, performance analytics, and global leaderboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

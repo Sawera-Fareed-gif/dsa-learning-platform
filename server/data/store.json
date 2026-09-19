@@ -1,0 +1,391 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin Shehzadi",
+      "email": "admin@dsa.com",
+      "password_hash": "$2b$10$zQEQNqI0/ETymMYFlxh8PeIz/RWb98wE5csru2NOG6MR1W1NU5OEC",
+      "role": "admin",
+      "created_at": "2026-09-10 10:00:00"
+    },
+    {
+      "id": 2,
+      "name": "Alex Turner",
+      "email": "alex@example.com",
+      "password_hash": "$2b$10$zQEQNqI0/ETymMYFlxh8PeIz/RWb98wE5csru2NOG6MR1W1NU5OEC",
+      "role": "user",
+      "created_at": "2026-09-12 11:30:00"
+    },
+    {
+      "id": 3,
+      "name": "Sara Connor",
+      "email": "sara@example.com",
+      "password_hash": "$2b$10$zQEQNqI0/ETymMYFlxh8PeIz/RWb98wE5csru2NOG6MR1W1NU5OEC",
+      "role": "user",
+      "created_at": "2026-09-14 09:15:00"
+    },
+    {
+      "id": 4,
+      "name": "Chen Wei",
+      "email": "chen@example.com",
+      "password_hash": "$2b$10$zQEQNqI0/ETymMYFlxh8PeIz/RWb98wE5csru2NOG6MR1W1NU5OEC",
+      "role": "user",
+      "created_at": "2026-09-15 14:20:00"
+    },
+    {
+      "id": 5,
+      "name": "Sawera Shehzadi",
+      "email": "za3060873@gmail.com",
+      "password_hash": "$2b$10$zQEQNqI0/ETymMYFlxh8PeIz/RWb98wE5csru2NOG6MR1W1NU5OEC",
+      "role": "admin",
+      "created_at": "2026-09-16 08:00:00"
+    },
+    {
+      "name": "Jane Doe",
+      "email": "janedoe@test.com",
+      "password_hash": "$2b$10$tqQ.9JIZedtk8.fVGa8HDuXt8wcsPd3TpFGMYqoSK2j6vgR6pmQ9e",
+      "role": "user",
+      "id": 6,
+      "created_at": "2026-09-19 18:02:44"
+    }
+  ],
+  "problems": [
+    {
+      "id": 1,
+      "title": "Two Sum Problem",
+      "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. What is the optimal time complexity using a Hash Map?",
+      "difficulty": "Easy",
+      "topic": "Arrays",
+      "options": [
+        "O(n^2) time, O(1) space",
+        "O(n) time, O(n) space",
+        "O(n log n) time, O(1) space",
+        "O(log n) time, O(n) space"
+      ],
+      "correct_answer": "O(n) time, O(n) space",
+      "explanation": "By storing each number's complement (target - num) in a Hash Map, lookup takes O(1) average time, resulting in O(n) overall time and space.",
+      "created_at": "2026-09-10 10:00:00"
+    },
+    {
+      "id": 2,
+      "title": "Maximum Subarray (Kadane's Algorithm)",
+      "description": "Find the contiguous subarray with the largest sum. What principle does Kadane's algorithm rely on at each step?",
+      "difficulty": "Medium",
+      "topic": "Arrays",
+      "options": [
+        "Sorting the array and taking two pointers",
+        "Deciding whether to add the current element to the existing subarray or start a new subarray",
+        "Binary search over prefix sums",
+        "Dividing into 3 sub-problems recursively"
+      ],
+      "correct_answer": "Deciding whether to add the current element to the existing subarray or start a new subarray",
+      "explanation": "Kadane's algorithm maintains max_ending_here = max(x, max_ending_here + x), deciding dynamically whether extending or resetting provides a larger sum in O(n) time.",
+      "created_at": "2026-09-10 10:05:00"
+    },
+    {
+      "id": 3,
+      "title": "Reverse Linked List",
+      "description": "Given the head of a singly linked list, reverse the list and return the reversed list. What pointers are strictly required to iteratively reverse in O(1) space?",
+      "difficulty": "Easy",
+      "topic": "Linked Lists",
+      "options": [
+        "prev, current, and next pointers",
+        "A stack to store all node addresses",
+        "Two pointers moving in opposite directions from head and tail",
+        "Only a single slow pointer"
+      ],
+      "correct_answer": "prev, current, and next pointers",
+      "explanation": "Iterative reversal requires prev (initially null), current (head), and next (to preserve reference before mutating current.next).",
+      "created_at": "2026-09-10 10:10:00"
+    },
+    {
+      "id": 4,
+      "title": "Detect Cycle in a Linked List (Floyd's Cycle)",
+      "description": "Given head, the head of a linked list, determine if the linked list has a cycle. Which algorithm achieves O(n) time and O(1) space?",
+      "difficulty": "Easy",
+      "topic": "Linked Lists",
+      "options": [
+        "Floyd's Tortoise and Hare algorithm",
+        "Dijkstra's shortest path",
+        "Kruskal's minimum spanning tree",
+        "Boyer-Moore voting algorithm"
+      ],
+      "correct_answer": "Floyd's Tortoise and Hare algorithm",
+      "explanation": "Floyd's algorithm uses slow (1 step) and fast (2 steps) pointers. If a cycle exists, they must meet within the cycle loop.",
+      "created_at": "2026-09-10 10:15:00"
+    },
+    {
+      "id": 5,
+      "title": "Invert Binary Tree",
+      "description": "Given the root of a binary tree, invert the tree, and return its root. What is the time complexity of inverting a binary tree with N nodes?",
+      "difficulty": "Easy",
+      "topic": "Trees",
+      "options": [
+        "O(N) because each node is visited once",
+        "O(N^2) because each swap takes linear time",
+        "O(log N) always",
+        "O(1) in-place swap of roots"
+      ],
+      "correct_answer": "O(N) because each node is visited once",
+      "explanation": "Every node must have its left and right subtrees swapped once, yielding O(N) linear time.",
+      "created_at": "2026-09-10 10:20:00"
+    },
+    {
+      "id": 6,
+      "title": "Lowest Common Ancestor (LCA) in BST",
+      "description": "Given a Binary Search Tree (BST) and two nodes p and q, find their Lowest Common Ancestor. What property allows O(h) navigation without a hash table?",
+      "difficulty": "Medium",
+      "topic": "Trees",
+      "options": [
+        "Left child is smaller and right child is greater than current root",
+        "All leaves reside at the exact same depth",
+        "BST is always balanced with AVL rotations",
+        "Edges are weighted directed graphs"
+      ],
+      "correct_answer": "Left child is smaller and right child is greater than current root",
+      "explanation": "In a BST, if both p and q are less than root, LCA is in left subtree; if both are greater, in right subtree; else root is the split point.",
+      "created_at": "2026-09-10 10:25:00"
+    },
+    {
+      "id": 7,
+      "title": "Climbing Stairs",
+      "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can climb 1 or 2 steps. How does this reduce to a known mathematical relation?",
+      "difficulty": "Easy",
+      "topic": "Dynamic Programming",
+      "options": [
+        "Fibonacci recurrence: F(n) = F(n-1) + F(n-2)",
+        "Catalan numbers recurrence",
+        "Factorial permutation: n!",
+        "Binomial coefficients: C(n, 2)"
+      ],
+      "correct_answer": "Fibonacci recurrence: F(n) = F(n-1) + F(n-2)",
+      "explanation": "To reach step n, you can arrive from step (n-1) with a 1-step or step (n-2) with a 2-step: ways(n) = ways(n-1) + ways(n-2).",
+      "created_at": "2026-09-10 10:30:00"
+    },
+    {
+      "id": 8,
+      "title": "0/1 Knapsack Problem",
+      "description": "Given weights and values of n items, put these items in a knapsack of capacity W to get maximum value. Why can't greedy approach solve 0/1 knapsack?",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "options": [
+        "Items cannot be broken; taking a high value-to-weight item may leave empty space that wastes capacity",
+        "Greedy requires float division which is prohibited in integer arrays",
+        "Greedy always produces negative weight cycles",
+        "There are no optimal substructures in knapsack"
+      ],
+      "correct_answer": "Items cannot be broken; taking a high value-to-weight item may leave empty space that wastes capacity",
+      "explanation": "Because items cannot be fractionally divided, choosing the greedily highest density item may preclude a better combination of items that completely fill capacity.",
+      "created_at": "2026-09-10 10:35:00"
+    },
+    {
+      "id": 9,
+      "title": "Breadth-First Search (BFS) Shortest Path",
+      "description": "In an unweighted graph, which data structure is fundamental to finding the shortest path between two vertices?",
+      "difficulty": "Easy",
+      "topic": "Graphs",
+      "options": [
+        "Queue (FIFO)",
+        "Stack (LIFO)",
+        "Max Heap",
+        "Disjoint Set Union (DSU)"
+      ],
+      "correct_answer": "Queue (FIFO)",
+      "explanation": "BFS uses a FIFO queue to explore nodes in order of their hop distance from the start vertex, guaranteeing the shortest path in unweighted graphs.",
+      "created_at": "2026-09-10 10:40:00"
+    },
+    {
+      "id": 10,
+      "title": "Detect Cycle in Directed Graph",
+      "description": "Which algorithm or color-marking approach is standard for finding cycles in a directed graph using DFS?",
+      "difficulty": "Medium",
+      "topic": "Graphs",
+      "options": [
+        "3-color DFS (White, Gray, Black) to detect back-edges",
+        "Prim's algorithm",
+        "Bellman-Ford relaxation",
+        "Huffman coding tree"
+      ],
+      "correct_answer": "3-color DFS (White, Gray, Black) to detect back-edges",
+      "explanation": "White = unvisited, Gray = visiting (on current call stack), Black = finished. Re-encountering a Gray node signifies a back-edge, hence a directed cycle.",
+      "created_at": "2026-09-10 10:45:00"
+    },
+    {
+      "id": 11,
+      "title": "Valid Anagram",
+      "description": "Given two strings s and t, return true if t is an anagram of s. What is the optimal frequency counting space complexity assuming lowercase English letters?",
+      "difficulty": "Easy",
+      "topic": "Strings",
+      "options": [
+        "O(1) space using a fixed 26-element integer array",
+        "O(N^2) using nested substring matching",
+        "O(N log N) using quicksort",
+        "O(2^N) exponential combinations"
+      ],
+      "correct_answer": "O(1) space using a fixed 26-element integer array",
+      "explanation": "An array of size 26 is fixed and constant space (O(1)) regardless of string length N.",
+      "created_at": "2026-09-10 10:50:00"
+    },
+    {
+      "id": 12,
+      "title": "Merge Sort Time & Space Complexity",
+      "description": "What are the worst-case time complexity and standard auxiliary space complexity of Merge Sort on an array of size N?",
+      "difficulty": "Medium",
+      "topic": "Sorting & Searching",
+      "options": [
+        "O(N log N) time and O(N) auxiliary space",
+        "O(N^2) time and O(1) auxiliary space",
+        "O(N) time and O(log N) auxiliary space",
+        "O(N log N) time and O(1) auxiliary space"
+      ],
+      "correct_answer": "O(N log N) time and O(N) auxiliary space",
+      "explanation": "Merge sort always divides array into halves (log N levels) and requires O(N) linear merging work per level, needing O(N) buffer memory.",
+      "created_at": "2026-09-10 10:55:00"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "Arrays & Hashing Fundamentals",
+      "topic": "Arrays",
+      "problem_ids": [
+        1,
+        2
+      ],
+      "created_at": "2026-09-11 12:00:00"
+    },
+    {
+      "id": 2,
+      "title": "Linked Lists & Pointers Mastery",
+      "topic": "Linked Lists",
+      "problem_ids": [
+        3,
+        4
+      ],
+      "created_at": "2026-09-11 12:05:00"
+    },
+    {
+      "id": 3,
+      "title": "Trees & Hierarchical Structures",
+      "topic": "Trees",
+      "problem_ids": [
+        5,
+        6
+      ],
+      "created_at": "2026-09-11 12:10:00"
+    },
+    {
+      "id": 4,
+      "title": "Dynamic Programming Essentials",
+      "topic": "Dynamic Programming",
+      "problem_ids": [
+        7,
+        8
+      ],
+      "created_at": "2026-09-11 12:15:00"
+    },
+    {
+      "id": 5,
+      "title": "Graph Traversal & Graph Algorithms",
+      "topic": "Graphs",
+      "problem_ids": [
+        9,
+        10
+      ],
+      "created_at": "2026-09-11 12:20:00"
+    },
+    {
+      "id": 6,
+      "title": "Strings & Sorting Practice",
+      "topic": "Strings",
+      "problem_ids": [
+        11,
+        12
+      ],
+      "created_at": "2026-09-11 12:25:00"
+    }
+  ],
+  "scores": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "quiz_id": 1,
+      "score": 100,
+      "total_questions": 2,
+      "date_taken": "2026-09-15 14:30:00"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "quiz_id": 2,
+      "score": 80,
+      "total_questions": 2,
+      "date_taken": "2026-09-16 11:15:00"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "quiz_id": 3,
+      "score": 90,
+      "total_questions": 2,
+      "date_taken": "2026-09-17 09:45:00"
+    },
+    {
+      "id": 4,
+      "user_id": 3,
+      "quiz_id": 1,
+      "score": 90,
+      "total_questions": 2,
+      "date_taken": "2026-09-16 16:20:00"
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "quiz_id": 4,
+      "score": 100,
+      "total_questions": 2,
+      "date_taken": "2026-09-18 13:00:00"
+    },
+    {
+      "id": 6,
+      "user_id": 4,
+      "quiz_id": 1,
+      "score": 70,
+      "total_questions": 2,
+      "date_taken": "2026-09-17 17:10:00"
+    },
+    {
+      "id": 7,
+      "user_id": 4,
+      "quiz_id": 5,
+      "score": 85,
+      "total_questions": 2,
+      "date_taken": "2026-09-18 19:30:00"
+    },
+    {
+      "id": 8,
+      "user_id": 5,
+      "quiz_id": 1,
+      "score": 100,
+      "total_questions": 2,
+      "date_taken": "2026-09-18 20:00:00"
+    },
+    {
+      "id": 9,
+      "user_id": 5,
+      "quiz_id": 2,
+      "score": 100,
+      "total_questions": 2,
+      "date_taken": "2026-09-19 08:30:00"
+    },
+    {
+      "id": 10,
+      "user_id": 5,
+      "quiz_id": 3,
+      "score": 100,
+      "total_questions": 2,
+      "date_taken": "2026-09-19 10:15:00"
+    }
+  ],
+  "updated_at": "2026-09-19T18:02:44.969Z"
+}
